@@ -1,0 +1,106 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fashion Clothes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<link rel="Stylesheet" href="css1/bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 343px;
+        }
+    </style>
+</head>
+<body id="top" style="background-color:darkkhaki; margin-left:5%; margin-right:5%";>
+    <form id="form1" runat="server">
+<!-- ####################################################################################################### -->
+<div class="wrapper col1" style="background-color:beige;">
+  <div id="header" style="margin-right:5%; background-color:beige; position:fixed; width:90%; /*box-shadow:1px 2px 1px rgba(0,0,0,.5);*/ top:0;/*padding-left:50%; padding-right:50%;*/">
+    <div id="logo" style="background-color:beige; margin-left:110px; color:white" class="auto-style1;">
+      <h1><a href="default.aspx"; style="color:black; background-color:beige; text-decoration:none;">Fashion Clothes</a></h1>
+      <p class="" style="color:black;">ASP.net C#</p>
+    </div>
+    <div  class="active has-sub " id="topnav" style="position:fixed; margin-left:240px; left:260px; top:40px; height: 68px; " ><!-- menu -->
+      
+          <% 
+    //abajo es para logueados, arriba es para un visitante del sitio
+    if (Prueba3.DatosEstaticos.logeado == true)
+    {
+        if (Prueba3.DatosEstaticos.TipoUser == "Cliente")
+        {
+                  %>
+                        <!--Opciones Cliente-->
+        <li ><a href="default.aspx">Inicio</a></li>
+        <li><a href="Catalogo.aspx">Catalogo</a></li>
+        <li><a href="Perfil.aspx">Perfil</a></li>
+        <li><a href="#">Opciones de usuario</a>
+          <ul>
+            <li><a href="Contactos.aspx">Contactos</a></li>
+            <li><a href="#">Cerrar Sesion</a></li>
+          </ul>
+        </li>
+          <%}
+    else if (Prueba3.DatosEstaticos.TipoUser == "Administrador")
+    {%>
+                            <!--Opciones admin-->
+          <li ><a href="default.aspx">Inicio</a></li>
+          <li><a href="Catalogo.aspx">Catalogo</a></li>
+          <li><a href="Perfil.aspx">Perfil</a></li>
+            <li><a href="#">Opciones de usuario</a>
+            <ul>
+           <li><a href="AgregarProductos.aspx">Agregar Productos</a></li>
+           <li><a href="AgregarProveedores.aspx">Proveedores</a></li>
+           <li><a href="Usuarios Registrados.aspx">Usuarios Registrados</a></li>  
+           <li><a href="Compras.aspx">Compras</a></li>            
+           <li><a href="Ventas.aspx">Ventas</a></li>
+           <li><a href="Productos Registrados.aspx">Productos Registrados</a></li>
+           <li><a href="Compras Registradas.aspx">Productos Registrados</a></li>
+            </ul>
+            </li>
+          <% }
+    } else
+    { %>
+         <!--  <li><a href="Perfil.aspx">logeate o comes kk</a></li>-->
+        <ul>
+        <li ><a href="default.aspx">Inicio</a></li>
+        <li><a href="Iniciar Sesion.aspx">Iniciar Sesion</a></li>  
+        <li><a href="Clientes.aspx">Registro</a></li>
+        <li><a href="Clientes.aspx">Quienes somos?</a></li>
+           
+          <% }%>
+        <!--<li class="last"><a href="#">Salir</a></li>-->
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+
+<!-- ####################################################################################################### -->
+<div class="wrapper col3" style="margin-top:170px;">
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+  
+
+    </asp:ContentPlaceHolder>
+
+  </div>
+<!-- ####################################################################################################### -->
+<br />
+
+<div class="wrapper col5" style="background-color:#FAFAFA;">
+  <div id="copyright">
+      <center>
+        <p class="" style="color:black;">Copyright &copy; 2018 - Todos los derechos reservados </p>
+      </center>
+    <br class="clear" />
+  </div>
+</div>
+    </form>
+</body>
+</html>
