@@ -9,7 +9,7 @@ namespace Prueba3
 {
     public partial class Finalizar : System.Web.UI.Page
     {
-        public N5 db = new N5();
+        public N6 db = new N6();
         protected void Page_Load(object sender, EventArgs e)
         {
 

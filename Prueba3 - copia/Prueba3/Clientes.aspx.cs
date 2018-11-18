@@ -38,7 +38,7 @@ namespace Prueba3
             //}          
             else
             {
-                var conn = new N5();
+                var conn = new N6();
                 SqlConnection n2 = new SqlConnection(cadenaConexion);
 
                 int i = conn.Usuarios.Where(c => c.NickName.ToUpper() == txtNickName.Text.ToUpper()).ToList().Count;

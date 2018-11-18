@@ -28,17 +28,17 @@
         {
                   %>
                         <!--Opciones Cliente-->
-       <% foreach (var producto in new Prueba3.N5().Productos.ToList())
+       <% foreach (var producto in new Prueba3.N6().Productos.ToList())
         { %>
-    <div class="col-md-4">
+        <div class="col-md-4">
         <div class="card bg-light" style="width:80%;  margin-left:10%; margin-right:10%;">
             <div class="card-body">
-           <h1 class="text-center"><%= producto.Nombre %></h1>   
-            </div>    
-            <div class="card-img img-thumbnail mb-1 mt-1" style="background-color: black; width: 100%; height:200px">
+            <h1 class="text-center"><%= producto.Nombre %></h1>   
+             </div>    
+                <div class="card-img img-thumbnail mb-1 mt-1" style="background-color: black; width: 100%; height:200px">
                 <asp:Image ID="Image1" runat="server" />
-            </div>
-            <div class="card-footer">
+             </div>
+                <div class="card-footer">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                     <h1>Categoria: <%= producto.CategoriaProducto.Nombre %></h1>
@@ -58,7 +58,7 @@
           <%}
     else if (Prueba3.DatosEstaticos.TipoUser == "Administrador")
     {%>                      <!--Opciones admin-->
-          <% foreach (var producto in new Prueba3.N5().Productos.ToList())
+          <% foreach (var producto in new Prueba3.N6().Productos.ToList())
         { %>
     <div class="col-md-4">
         <div class="card bg-light" style="width:80%;  margin-left:10%; margin-right:10%;">
@@ -92,7 +92,7 @@
     } else
     { %>
          <!--  <li><a href="Perfil.aspx">logeate o comes kk</a></li>-->
-          <% foreach (var producto in new Prueba3.N5().Productos.ToList())
+          <% foreach (var producto in new Prueba3.N6().Productos.ToList())
         { %>
     <div class="col-md-4">
         <div class="card bg-light" style="width:80%;  margin-left:10%; margin-right:10%;">

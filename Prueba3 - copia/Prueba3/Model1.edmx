@@ -840,7 +840,7 @@
           <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="N5" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="N6" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CategoriaProducto" EntityType="Self.CategoriaProducto" />
           <EntitySet Name="Compras" EntityType="Self.Compras" />
           <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" />
@@ -924,7 +924,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_A4212A_FashionClothesModelStoreContainer" CdmEntityContainer="N5">
+        <EntityContainerMapping StorageEntityContainer="DB_A4212A_FashionClothesModelStoreContainer" CdmEntityContainer="N6">
           <EntitySetMapping Name="CategoriaProducto">
             <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.CategoriaProducto">
               <MappingFragment StoreEntitySet="CategoriaProducto">

@@ -36,9 +36,9 @@ namespace Prueba3
 
             if (n2.Buscar() == true)
             {
-                DatosEstaticos.IDusuario = new N5().Usuarios.Where(st => st.NickName == txtNombreUsuario.Text).First().IdUsuario;
+                DatosEstaticos.IDusuario = new N6().Usuarios.Where(st => st.NickName == txtNombreUsuario.Text).First().IdUsuario;
                 DatosEstaticos.logeado = true;
-                DatosEstaticos.TipoUser = new N5().Usuarios.Where(st => st.NickName == txtNombreUsuario.Text).First().TiposdeUsuario.Descripcion;
+                DatosEstaticos.TipoUser = new N6().Usuarios.Where(st => st.NickName == txtNombreUsuario.Text).First().TiposdeUsuario.Descripcion;
                 Response.Write("<script>alert('" + DatosEstaticos.TipoUser +"')</script>");
                 Response.Redirect("~/Perfil.aspx");
             }

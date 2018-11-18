@@ -11,7 +11,7 @@ namespace Prueba3
     public partial class Catalogo : System.Web.UI.Page
     {
         
-        public N5 dbproductos = new N5();
+        public N6 dbproductos = new N6();
         protected void Page_Load(object sender, EventArgs e)
         {
             

@@ -9,7 +9,7 @@ namespace Prueba3
 {
     public partial class Compras1 : System.Web.UI.Page
     {
-        public N5 db = new N5();
+        public N6 db = new N6();
         protected void Page_Load(object sender, EventArgs e)
         {
             //if (DatosEstaticos.TipoUser != "Cliente" && DatosEstaticos.logeado != true)
@@ -29,7 +29,7 @@ namespace Prueba3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var conn = new N5();
+            var conn = new N6();
             var compras = new Compras()
             {
                 //IdEmpleados = Convert.ToInt16(TxtIdEmpleados.Text),
@@ -51,7 +51,7 @@ namespace Prueba3
             //    var compras = db.Compras.Find(id);
 
             //    compras.IdCompras = Convert.ToUInt16(TxtProductos.Text);
-            //    compras.IdCompras = new N5().DetalleCompra.Where(ST => ST.Unidades == Convert.ToUInt16(TxtCantidad.Text)).First().IdDetalleCompra;  
+            //    compras.IdCompras = new N6().DetalleCompra.Where(ST => ST.Unidades == Convert.ToUInt16(TxtCantidad.Text)).First().IdDetalleCompra;  
             //    compras.FechaCompra = Convert.ToDateTime(TxtFecha.Text);
 
             //    int cont = compras.DetalleCompra.ToList().Count;
