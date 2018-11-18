@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Catalogo.aspx.cs" Inherits="Prueba3.Catalogo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <link href="css1/bootstrap.min.css" rel="stylesheet" />
+    <link href="css1/bootstrap.min.css" rel="stylesheet" />
     <br />
     <br />
     <br />
@@ -83,8 +83,7 @@
                 <%--<asp:HyperLink ID="HyperLink1" CssClass="btn card-link btn-block" runat="server">Comprar</asp:HyperLink>
                 <% HyperLink1.NavigateUrl = "Cantidad.aspx?id=" + producto.IdProductos;%>--%>
                 <a href="Cantidad.aspx?id=<%= producto.IdProductos %>"  class="btn btn-block btn-info"> Comprar!</a>    
-                <a href="Compras.aspx?id=<%= producto.IdProductos %>"  class="btn btn-block btn-info"> Añadir mas productos!</a>
-              </div>
+                <a href="Compras.aspx?id=<%= producto.IdProductos %>"  class="btn btn-block btn-info"> Añadir mas productos!</a></div>
             </div>
             <br />
          </div>

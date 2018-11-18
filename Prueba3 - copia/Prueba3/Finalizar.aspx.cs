@@ -17,7 +17,13 @@ namespace Prueba3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (Session["IdVenta"] == null) {
+           
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            if (Session["IdVenta"] == null)
+            {
                 Response.Redirect("Catalogo.aspx");
             }
             else
@@ -33,18 +39,18 @@ namespace Prueba3
                 int cont = pedido.DetallePedido.ToList().Count;
                 int i = 0;
 
-                foreach (var item in pedido.DetallePedido) {
+                foreach (var item in pedido.DetallePedido)
+                {
                     var stock = db.Stock.Where(c => c.IdProducto == item.Productos.IdProductos).First();
-
                     stock.CantidadTotal = stock.CantidadTotal - item.Cantidad;
-
-
-                    if (db.SaveChanges() > 0) {
+                    if (db.SaveChanges() > 0)
+                    {
                         i++;
                     }
                 }
 
-                if (cont == i) {
+                if (cont == i)
+                {
                     Session["IdVenta"] = null;
                     Response.Redirect("Catalogo.aspx");
                 }
