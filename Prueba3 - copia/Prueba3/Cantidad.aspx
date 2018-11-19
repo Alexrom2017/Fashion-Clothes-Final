@@ -17,10 +17,15 @@
            <br />
            <br />
            <asp:Button CssClass="btn btn-block btn-info" Width="40%" ID="btnCantidad" runat="server" Text="Agregar al carrito y seguir comprando" OnClick="BtnCantidad_Click" />
+               <br />
+               <br />
+               <br />
+               <br />
+             
+
+           <a href="Finalizar.aspx" style=" width:40%; margin-top:-10%;" class="btn btn-block btn-info" > Efectuar Compra!</a>
            <br />
-           <asp:Button CssClass="btn btn-block btn-info" Width="40%" ID="btnFinalizar" runat="server" OnClick="Button2_Click" Text="Terminar Compra!" />
-           <br />
-                  </center>
+           </center>
            </div>
      
       <br />

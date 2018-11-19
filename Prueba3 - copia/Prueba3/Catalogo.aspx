@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Catalogo.aspx.cs" Inherits="Prueba3.Catalogo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <link href="css1/bootstrap.min.css" rel="stylesheet" />
+    <link href="css1/bootstrap.min.css" rel="stylesheet" />
     <br />
     <br />
     <br />
@@ -11,9 +11,12 @@
         <asp:TextBox CssClass="form-control" Width="40%" ID="TextBox1" runat="server"></asp:TextBox>
         <br />
         <asp:Button CssClass="btn btn-block btn-lg btn-primary" Width="40%" ID="btnBuscar" runat="server" Text="Buscar" />
+           <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Button" />
         <br />
-        <a href="Finalizar.aspx>" style="float:right; width:40%; margin-top:-10%;" class="btn btn-block btn-info"> Efectuar Compra!</a>
-       </div>
+        <a href="Finalizar.aspx" style="float:right; width:40%; margin-top:-10%;" class="btn btn-block btn-info" > Efectuar Compra!</a>
+       <br />
+           <br />
+       &nbsp;</div>
       <br />
    <div class="container" style="background-color:lightskyblue; border:solid; border-style:solid; width:80%;">
        <br />
@@ -83,7 +86,7 @@
                 <%--<asp:HyperLink ID="HyperLink1" CssClass="btn card-link btn-block" runat="server">Comprar</asp:HyperLink>
                 <% HyperLink1.NavigateUrl = "Cantidad.aspx?id=" + producto.IdProductos;%>--%>
                 <a href="Cantidad.aspx?id=<%= producto.IdProductos %>"  class="btn btn-block btn-info"> Comprar!</a>    
-                <a href="Compras.aspx?id=<%= producto.IdProductos %>"  class="btn btn-block btn-info"> Añadir mas productos!</a>
+                <a href="CantidadCompras.aspx?id=<%= producto.IdProductos %>"  class="btn btn-block btn-info"> Añadir mas productos!</a>
               </div>
             </div>
             <br />

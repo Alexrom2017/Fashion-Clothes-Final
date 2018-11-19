@@ -113,6 +113,7 @@
     <Content Include="AgregarProductos.aspx" />
     <Content Include="AgregarProveedores.aspx" />
     <Content Include="Cantidad.aspx" />
+    <Content Include="CantidadCompras.aspx" />
     <Content Include="Compras Registradas.aspx" />
     <Content Include="Compras.aspx" />
     <Content Include="Contactos.aspx" />
@@ -204,6 +205,13 @@
     </Compile>
     <Compile Include="Cantidad.aspx.designer.cs">
       <DependentUpon>Cantidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CantidadCompras.aspx.cs">
+      <DependentUpon>CantidadCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CantidadCompras.aspx.designer.cs">
+      <DependentUpon>CantidadCompras.aspx</DependentUpon>
     </Compile>
     <Compile Include="Catalogo.aspx.cs">
       <DependentUpon>Catalogo.aspx</DependentUpon>
@@ -358,6 +366,12 @@
     </Compile>
     <Compile Include="Prueba.Master.designer.cs">
       <DependentUpon>Prueba.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Stock.cs">
       <DependentUpon>Model1.tt</DependentUpon>

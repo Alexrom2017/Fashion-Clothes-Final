@@ -21,7 +21,7 @@ namespace Prueba3
             this.lblNombre.Text = (new N6().Usuarios.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().Nombre)+ (new N6().Usuarios.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().Apellido); ;
             this.lblDireccion.Text = new N6().Usuarios.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().Direccion;
             this.lblCorreo.Text = new N6().Usuarios.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().Correo;
-            this.lblCompras.Text = new N6().Pedidos.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().IdUsuario.ToString();
+            //this.lblCompras.Text = new N6().Pedidos.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().IdUsuario.ToString();
             this.lblTelefono.Text = new N6().Usuarios.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().Telefono;
             this.lblRol.Text = new N6().TiposdeUsuario.Where(st => st.Descripcion == DatosEstaticos.TipoUser).First().Descripcion;
 
