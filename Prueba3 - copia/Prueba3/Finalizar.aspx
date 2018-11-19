@@ -14,7 +14,8 @@
          <br />
          Departamento: <asp:TextBox CssClass="form-control" Width="40%" ID="txtDepartamento" runat="server"></asp:TextBox>
          <br />
-         <asp:Button CssClass="btn btn-block btn-info" Width="40%" ID="Button2" runat="server" Text="Guardar" OnClick="Button1_Click" />
+            <br />
+            <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Guardar" />
          </center>
            <br />
            <br />
