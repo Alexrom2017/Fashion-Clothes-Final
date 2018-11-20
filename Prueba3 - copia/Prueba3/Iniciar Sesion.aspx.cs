@@ -44,10 +44,12 @@ namespace Prueba3
             }
             else
             {
+                //ClientScript.RegisterStartupScript(this.GetType(), "randontext", "hola()", true);
+
                 Response.Write("<script>alert('Datos Incorrectos')</script>");
             }
 
-           
+
         }
     }
 }

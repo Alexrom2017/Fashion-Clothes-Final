@@ -32,14 +32,14 @@ namespace Prueba3
             conn.Productos.Add(m1);
             if (conn.SaveChanges() > 0)
             {
+                //ClientScript.RegisterStartupScript(this.GetType(), "randontext", "hola()", true);
                 Response.Write("<script> alert('El producto se registro exitosamente')</script>");
                 //Response.Redirect("~/AgregarProductos.aspx");
                 TextNom.Text = "";
                 TextDesp.Text = "";
                txtPrecioCompra.Text = "";
-                //IdProveedor = int.Parse(DDLProveedores.Text),
                txtPrecioVenta.Text = "";
-                //IdCategoria = int.Parse(DDLCategoria.Text)
+
             }
             
 

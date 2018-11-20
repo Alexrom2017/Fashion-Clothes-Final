@@ -114,12 +114,14 @@
     <Content Include="AgregarProveedores.aspx" />
     <Content Include="Cantidad.aspx" />
     <Content Include="CantidadCompras.aspx" />
+    <Content Include="Categorias.aspx" />
     <Content Include="Compras Registradas.aspx" />
     <Content Include="Contactos.aspx" />
     <Content Include="css1\bootstrap.min.css" />
     <Content Include="css2\estilos.css" />
     <Content Include="css2\fontello.css" />
     <Content Include="Empleados.aspx" />
+    <Content Include="Existencias.aspx" />
     <Content Include="Finalizar.aspx" />
     <Content Include="font\fontello.svg" />
     <Content Include="Imagenes\back.png" />
@@ -135,6 +137,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="PreveedoresRegistrados.aspx" />
     <Content Include="Productos Registrados.aspx" />
     <Content Include="Iniciar Sesion.aspx" />
     <Content Include="js\main.js" />
@@ -221,6 +224,13 @@
     <Compile Include="CategoriaProducto.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Categorias.aspx.cs">
+      <DependentUpon>Categorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categorias.aspx.designer.cs">
+      <DependentUpon>Categorias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.aspx.cs">
       <DependentUpon>Clientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,6 +284,13 @@
     <Compile Include="EntregaPedidos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Existencias.aspx.cs">
+      <DependentUpon>Existencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Existencias.aspx.designer.cs">
+      <DependentUpon>Existencias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Finalizar.aspx.cs">
       <DependentUpon>Finalizar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -302,6 +319,13 @@
     </Compile>
     <Compile Include="Pedidos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PreveedoresRegistrados.aspx.cs">
+      <DependentUpon>PreveedoresRegistrados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreveedoresRegistrados.aspx.designer.cs">
+      <DependentUpon>PreveedoresRegistrados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos Registrados.aspx.cs">
       <DependentUpon>Productos Registrados.aspx</DependentUpon>

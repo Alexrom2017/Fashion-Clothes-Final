@@ -37,7 +37,6 @@
                         </dx:ASPxLabel>
                         <br />
            <asp:TextBox ID="TxtTelefono" runat="server" class="form-control" Width="50%" Height="21px">0000-0000</asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TxtTelefono" ErrorMessage="Requerido" ForeColor="Red"></asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TxtTelefono" ErrorMessage="Número no válido" ForeColor="Red" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                         <br />
                         <dx:ASPxLabel ID="ASPxLabel4" runat="server" Text="Email" Theme="iOS">

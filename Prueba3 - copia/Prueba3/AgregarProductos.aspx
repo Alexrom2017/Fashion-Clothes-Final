@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="AgregarProductos.aspx.cs" Inherits="Prueba3.AgregarProductos" %>
 <%@ Register assembly="DevExpress.Web.Bootstrap.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.Bootstrap" tagprefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
+  
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <link href="css1/bootstrap.min.css" rel="stylesheet" type="text/css"></link>   
+        <link href="css1/bootstrap.min.css" rel="stylesheet" type="text/css"></link> 
            <div class="container">         
                 <div class="row">
                     <div class="col-md-6">
@@ -77,7 +78,5 @@
                     </div>
             
 <%--**********************************************************************************************************************************************--%>                    
-
-    </html>
     
 </asp:Content>
