@@ -31,6 +31,7 @@ namespace Prueba3
         public Nullable<int> IdCategoria { get; set; }
         public Nullable<int> IdPromociones { get; set; }
         public Nullable<int> ImagenID { get; set; }
+        public Nullable<int> IdProveedor { get; set; }
     
         public virtual CategoriaProducto CategoriaProducto { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

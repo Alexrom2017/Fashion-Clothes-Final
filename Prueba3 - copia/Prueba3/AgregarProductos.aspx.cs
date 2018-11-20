@@ -9,26 +9,40 @@ namespace Prueba3
 {
     public partial class AgregarProductos : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            foreach(var a in new N6().CategoriaProducto.ToList())
-            DDLCategoria.Items.Add(a.Nombre.ToString());
+            //Response.Write("<script> alert('El producto se registro exitosamente')</script>");
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var conn = new N6();
-            var n2 = new Productos()
-            {
-                IdProductos = 50, 
+            var conn = new N1();
+            var m1 = new Productos()
+            {     
                 Nombre = TextNom.Text,
+                Detalles = TextDesp.Text,
                 PrecioCompra = Convert.ToDecimal(txtPrecioCompra.Text),
+                IdProveedor = int.Parse(DDLProveedores.Text),
                 PrecioVenta = Convert.ToDecimal(txtPrecioVenta.Text),
-                IdCategoria = new N6().CategoriaProducto.Where(ST => ST.Nombre == DDLCategoria.SelectedItem.Text).First().IdCategoria
+                IdCategoria = int.Parse(DDLCategoria.Text)
+
             };
-            conn.Productos.Add(n2);
-            conn.SaveChanges();
-            Response.Redirect("~/AgregarProductos.aspx");
+
+            conn.Productos.Add(m1);
+            if (conn.SaveChanges() > 0)
+            {
+                Response.Write("<script> alert('El producto se registro exitosamente')</script>");
+                //Response.Redirect("~/AgregarProductos.aspx");
+                TextNom.Text = "";
+                TextDesp.Text = "";
+               txtPrecioCompra.Text = "";
+                //IdProveedor = int.Parse(DDLProveedores.Text),
+               txtPrecioVenta.Text = "";
+                //IdCategoria = int.Parse(DDLCategoria.Text)
+            }
+            
+
         }
     }
 }

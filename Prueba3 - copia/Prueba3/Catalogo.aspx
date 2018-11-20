@@ -11,7 +11,7 @@
         <asp:TextBox CssClass="form-control" Width="40%" ID="TextBox1" runat="server"></asp:TextBox>
         <br />
         <asp:Button CssClass="btn btn-block btn-lg btn-primary" Width="40%" ID="btnBuscar" runat="server" Text="Buscar" />
-           <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Button" />
+           <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Nueva Compra" />
         <br />
         <a href="Finalizar.aspx" style="float:right; width:40%; margin-top:-10%;" class="btn btn-block btn-info" > Efectuar Compra!</a>
        <br />
@@ -31,7 +31,7 @@
         {
                   %>
                         <!--Opciones Cliente-->
-       <% foreach (var producto in new Prueba3.N6().Productos.ToList())
+       <% foreach (var producto in new Prueba3.N1().Productos.ToList())
         { %>
         <div class="col-md-4">
         <div class="card bg-light" style="width:80%;  margin-left:10%; margin-right:10%;">
@@ -61,7 +61,7 @@
           <%}
     else if (Prueba3.DatosEstaticos.TipoUser == "Administrador")
     {%>                      <!--Opciones admin-->
-          <% foreach (var producto in new Prueba3.N6().Productos.ToList())
+          <% foreach (var producto in new Prueba3.N1().Productos.ToList())
         { %>
     <div class="col-md-4">
         <div class="card bg-light" style="width:80%;  margin-left:10%; margin-right:10%;">
@@ -95,7 +95,7 @@
     } else
     { %>
          <!--  <li><a href="Perfil.aspx">logeate o comes kk</a></li>-->
-          <% foreach (var producto in new Prueba3.N6().Productos.ToList())
+          <% foreach (var producto in new Prueba3.N1().Productos.ToList())
         { %>
     <div class="col-md-4">
         <div class="card bg-light" style="width:80%;  margin-left:10%; margin-right:10%;">

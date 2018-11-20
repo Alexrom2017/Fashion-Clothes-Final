@@ -2,7 +2,7 @@
 <%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="IdPedido" Theme="Material">
+        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="Pedido" Theme="Metropolis">
 <SettingsAdaptivity>
 <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
 </SettingsAdaptivity>
@@ -11,23 +11,31 @@
 
 <EditFormLayoutProperties ColCount="1"></EditFormLayoutProperties>
             <Columns>
-                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" VisibleIndex="0">
-                </dx:GridViewCommandColumn>
-                <dx:GridViewDataTextColumn FieldName="IdPedido" ReadOnly="True" VisibleIndex="1">
+                <dx:GridViewDataTextColumn FieldName="Pedido" ReadOnly="True" VisibleIndex="0">
                     <EditFormSettings Visible="False" />
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="IdUsuario" VisibleIndex="2">
+                <dx:GridViewDataTextColumn FieldName="IdUsuario" VisibleIndex="3">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataDateColumn FieldName="FechaPedido" VisibleIndex="3">
+                <dx:GridViewDataDateColumn FieldName="Fecha" VisibleIndex="4">
                 </dx:GridViewDataDateColumn>
-                <dx:GridViewDataTextColumn FieldName="Destino" VisibleIndex="4">
+                <dx:GridViewDataTextColumn FieldName="Destino" VisibleIndex="5">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DireccionDestion" VisibleIndex="5">
+                <dx:GridViewDataTextColumn FieldName="DireccionDestion" VisibleIndex="6">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Departamento" VisibleIndex="6">
+                <dx:GridViewDataTextColumn FieldName="Departamento" VisibleIndex="7">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Detalle" ReadOnly="True" VisibleIndex="8">
+                    <EditFormSettings Visible="False" />
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Producto" VisibleIndex="9">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Cantidad" VisibleIndex="10">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Precio" VisibleIndex="11">
                 </dx:GridViewDataTextColumn>
             </Columns>
         </dx:ASPxGridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A4212A_FashionClothesConnectionString2 %>" SelectCommand="SELECT Pedidos.IdPedido as Pedido, Pedidos.IdUsuario, Pedidos.FechaPedido as Fecha, Pedidos.Destino, Pedidos.DireccionDestion, Pedidos.Departamento, DetallePedido.IdDetallePedido as Detalle, DetallePedido.IdProducto as Producto, DetallePedido.Cantidad, DetallePedido.PrecioUnitario as Precio FROM Pedidos INNER JOIN DetallePedido ON Pedidos.IdPedido = DetallePedido.IdPedido"></asp:SqlDataSource>
     </p>
     <p>
         <dx:ASPxHyperLink ID="ASPxHyperLink1" runat="server" NavigateUrl="~/Ventas.aspx" Text="Agregar ventas" />
@@ -35,37 +43,7 @@
     <p>
         &nbsp;</p>
     <p>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:DB_A4212A_FashionClothesConnectionString5 %>" DeleteCommand="DELETE FROM [Pedidos] WHERE [IdPedido] = @original_IdPedido AND [IdUsuario] = @original_IdUsuario AND [FechaPedido] = @original_FechaPedido AND [Destino] = @original_Destino AND [DireccionDestion] = @original_DireccionDestion AND (([Departamento] = @original_Departamento) OR ([Departamento] IS NULL AND @original_Departamento IS NULL))" InsertCommand="INSERT INTO [Pedidos] ([IdUsuario], [FechaPedido], [Destino], [DireccionDestion], [Departamento]) VALUES (@IdUsuario, @FechaPedido, @Destino, @DireccionDestion, @Departamento)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Pedidos]" UpdateCommand="UPDATE [Pedidos] SET [IdUsuario] = @IdUsuario, [FechaPedido] = @FechaPedido, [Destino] = @Destino, [DireccionDestion] = @DireccionDestion, [Departamento] = @Departamento WHERE [IdPedido] = @original_IdPedido AND [IdUsuario] = @original_IdUsuario AND [FechaPedido] = @original_FechaPedido AND [Destino] = @original_Destino AND [DireccionDestion] = @original_DireccionDestion AND (([Departamento] = @original_Departamento) OR ([Departamento] IS NULL AND @original_Departamento IS NULL))">
-            <DeleteParameters>
-                <asp:Parameter Name="original_IdPedido" Type="Int32" />
-                <asp:Parameter Name="original_IdUsuario" Type="Int32" />
-                <asp:Parameter DbType="Date" Name="original_FechaPedido" />
-                <asp:Parameter Name="original_Destino" Type="String" />
-                <asp:Parameter Name="original_DireccionDestion" Type="String" />
-                <asp:Parameter Name="original_Departamento" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="IdUsuario" Type="Int32" />
-                <asp:Parameter DbType="Date" Name="FechaPedido" />
-                <asp:Parameter Name="Destino" Type="String" />
-                <asp:Parameter Name="DireccionDestion" Type="String" />
-                <asp:Parameter Name="Departamento" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="IdUsuario" Type="Int32" />
-                <asp:Parameter DbType="Date" Name="FechaPedido" />
-                <asp:Parameter Name="Destino" Type="String" />
-                <asp:Parameter Name="DireccionDestion" Type="String" />
-                <asp:Parameter Name="Departamento" Type="String" />
-                <asp:Parameter Name="original_IdPedido" Type="Int32" />
-                <asp:Parameter Name="original_IdUsuario" Type="Int32" />
-                <asp:Parameter DbType="Date" Name="original_FechaPedido" />
-                <asp:Parameter Name="original_Destino" Type="String" />
-                <asp:Parameter Name="original_DireccionDestion" Type="String" />
-                <asp:Parameter Name="original_Departamento" Type="String" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
-    </p>
+        &nbsp;</p>
 <p>
         &nbsp;</p>
 </asp:Content>

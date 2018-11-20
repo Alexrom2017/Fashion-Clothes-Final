@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="92baa7cc5b3e4d99b02c195b0a7854a8" Name="Diagram1">
+      <Diagram DiagramId="fd5effd9e3db4068bb3865aca3038474" Name="Diagram1">
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.CategoriaProducto" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Compras" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.DatosPersonales" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
@@ -14,7 +14,7 @@
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.EntregaPedidos" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Imagenes" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Pedidos" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Productos" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Productos" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Promociones" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Proveedores" Width="1.5" PointX="5.25" PointY="20.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Stock" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />

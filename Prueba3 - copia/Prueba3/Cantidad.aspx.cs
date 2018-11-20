@@ -9,16 +9,18 @@ namespace Prueba3
 {
     public partial class Cantidad : System.Web.UI.Page
     {
-        public N6 db = new N6();
+        public N1 db = new N1();
+        public static Productos vender = new Productos();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Label1.Text = Request.QueryString["id"];
+            //vender = db.Productos.Where(st => st.IdProductos ==  int.Parse(Request.QueryString["id"].ToString())).ToList().First();
         }
 
         protected void BtnCantidad_Click(object sender, EventArgs e)
         {
             if( Session["IdVenta"] == null)
             {
+                
                 Pedidos pedidos = new Prueba3.Pedidos()
                 {
                     IdUsuario = DatosEstaticos.IDusuario,
@@ -84,7 +86,7 @@ namespace Prueba3
             }
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void ButtoN1_Click(object sender, EventArgs e)
         {
             txtCantidad.Text = "";
             Response.Redirect("~/Finalizar.aspx");

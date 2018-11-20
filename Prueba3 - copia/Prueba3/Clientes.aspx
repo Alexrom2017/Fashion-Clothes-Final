@@ -69,6 +69,8 @@
                 <br />
                 <asp:TextBox ID="txtCorreo" runat="server" class="form-control" Width="50%"></asp:TextBox>
 
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Correo no válido" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+
                 <br />
                 <asp:Label ID="Label12" runat="server" Text="Nombre de Usuario" ></asp:Label>
                 <asp:TextBox ID="txtNickName" runat="server" class="form-control" Width="50%"></asp:TextBox>
@@ -78,11 +80,10 @@
                 <asp:Label ID="Label6" runat="server" Text="Contraseña"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtContraseña" runat="server" class="form-control" Width="50%" EnableTheming="False" TextMode="Password"></asp:TextBox>
-                <dx:ASPxLabel ID="LblContraseña" runat="server" ForeColor="Red" Theme="Mulberry">
-                </dx:ASPxLabel>
                 <br />
                 <asp:Label ID="Label11" runat="server" Text="Confirmar Contraseña"></asp:Label>
                 <asp:TextBox ID="txtConfirmarContraseña" runat="server" class="form-control" Width="50%" TextMode="Password"></asp:TextBox>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtContraseña" ControlToValidate="txtConfirmarContraseña" ErrorMessage="No son iguales" ForeColor="Red"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Direccion:"></asp:Label>
                 <br />
@@ -92,6 +93,7 @@
                 <asp:Label ID="Label3" runat="server" Text="Telefono:"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtTelefono" runat="server" class="form-control" Width="50%"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtTelefono" ErrorMessage="Ingrese solo números" ForeColor="Red" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
                 <br />
                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar" Width="50%" class="btn btn-primary" OnClick="btnAgregar_Click"/>
               

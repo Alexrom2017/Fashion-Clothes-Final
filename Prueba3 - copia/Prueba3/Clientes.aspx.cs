@@ -16,8 +16,7 @@ namespace Prueba3
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            
+    
         }
 
         protected void btnbuscar_Click(object sender, EventArgs e)
@@ -27,25 +26,14 @@ namespace Prueba3
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-          
-            if (String.IsNullOrWhiteSpace(txtContraseña.Text) || String.IsNullOrWhiteSpace(txtConfirmarContraseña.Text))
-            {
-               LblContraseña.Text = "Ingrese una contraseña";
-            }
-            //else if (txtContraseña.Text != txtConfirmarContraseña.Text)
-            //{
-            //    LblContraseña.Text = "Los datos no coinciden";
-            //}          
-            else
-            {
-                var conn = new N6();
-                SqlConnection n2 = new SqlConnection(cadenaConexion);
+                var conn = new N1();
+                SqlConnection N1 = new SqlConnection(cadenaConexion);
 
                 int i = conn.Usuarios.Where(c => c.NickName.ToUpper() == txtNickName.Text.ToUpper()).ToList().Count;
 
                 if (i != 0)
                 {
-                    LblUsuario.Text = "Ingrese otro nombre de usuario";
+                    LblUsuario.Text = "Usuario existente";
                 }
                 else
                 {
@@ -77,15 +65,15 @@ namespace Prueba3
                     cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = ImagenOriginal;
 
                     cmd.CommandType = CommandType.Text;
-                    cmd.Connection = n2;
-                    n2.Open();
+                    cmd.Connection = N1;
+                    N1.Open();
                     cmd.ExecuteNonQuery();
                     conn.Usuarios.Add(User1);
                     conn.SaveChanges();
                     Response.Redirect("~/Iniciar Sesion.aspx");
                 }
 
-            }    
+              
 
 
             ////****************************************************************************************************************************

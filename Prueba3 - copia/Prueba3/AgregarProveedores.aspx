@@ -26,6 +26,7 @@
                         </dx:ASPxLabel>
                         <br />
            <asp:TextBox ID="TxtNombre" runat="server" class="form-control" Width="50%" Height="21px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtNombre" ErrorMessage="Requirido" ForeColor="Red" ValidateRequestMode="Enabled"></asp:RequiredFieldValidator>
                         <br />
                         <dx:ASPxLabel ID="ASPxLabel2" runat="server" Text="Dirección" Theme="iOS">
                         </dx:ASPxLabel>
@@ -35,11 +36,14 @@
                         <dx:ASPxLabel ID="ASPxLabel3" runat="server" Text="Teléfono" Theme="iOS">
                         </dx:ASPxLabel>
                         <br />
-           <asp:TextBox ID="TxtTelefono" runat="server" class="form-control" Width="50%" Height="21px"></asp:TextBox>
+           <asp:TextBox ID="TxtTelefono" runat="server" class="form-control" Width="50%" Height="21px">0000-0000</asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TxtTelefono" ErrorMessage="Requerido" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TxtTelefono" ErrorMessage="Número no válido" ForeColor="Red" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                         <br />
                         <dx:ASPxLabel ID="ASPxLabel4" runat="server" Text="Email" Theme="iOS">
                         </dx:ASPxLabel>
            <asp:TextBox ID="TxtEmail" runat="server" class="form-control" Width="50%" Height="21px"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TxtEmail" ErrorMessage="Correo no válido" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                         <br />
                         <asp:Button ID="BtnAgregarProveedor" runat="server" Text="Agregar" />
                         <br />

@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
         <br />
-        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="IdPedido" Theme="Material">
+        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="IdCompras" Theme="Material">
 <SettingsAdaptivity>
 <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
 </SettingsAdaptivity>
@@ -13,53 +13,30 @@
 
 <EditFormLayoutProperties ColCount="1"></EditFormLayoutProperties>
             <Columns>
-                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" VisibleIndex="0">
-                </dx:GridViewCommandColumn>
-                <dx:GridViewDataTextColumn FieldName="IdPedido" ReadOnly="True" VisibleIndex="1">
+                <dx:GridViewDataTextColumn FieldName="IdCompras" ReadOnly="True" VisibleIndex="0">
+                    <EditFormSettings Visible="False" />
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Expr1" VisibleIndex="1" ReadOnly="True">
                     <EditFormSettings Visible="False" />
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="IdUsuario" VisibleIndex="2">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataDateColumn FieldName="FechaPedido" VisibleIndex="3">
+                <dx:GridViewDataTextColumn FieldName="IdProveedores" VisibleIndex="3">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataDateColumn FieldName="FechaCompra" VisibleIndex="4">
                 </dx:GridViewDataDateColumn>
-                <dx:GridViewDataTextColumn FieldName="Destino" VisibleIndex="4">
+                <dx:GridViewDataTextColumn FieldName="IdDetalleCompra" VisibleIndex="5" ReadOnly="True">
+                    <EditFormSettings Visible="False" />
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DireccionDestion" VisibleIndex="5">
+                <dx:GridViewDataTextColumn FieldName="IdProducto" VisibleIndex="6">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Departamento" VisibleIndex="6">
+                <dx:GridViewDataTextColumn FieldName="Unidades" VisibleIndex="7">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="CostoUnitario" VisibleIndex="8">
                 </dx:GridViewDataTextColumn>
             </Columns>
         </dx:ASPxGridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:DB_A4212A_FashionClothesConnectionString4 %>" DeleteCommand="DELETE FROM [Pedidos] WHERE [IdPedido] = @original_IdPedido AND [IdUsuario] = @original_IdUsuario AND [FechaPedido] = @original_FechaPedido AND [Destino] = @original_Destino AND [DireccionDestion] = @original_DireccionDestion AND (([Departamento] = @original_Departamento) OR ([Departamento] IS NULL AND @original_Departamento IS NULL))" InsertCommand="INSERT INTO [Pedidos] ([IdUsuario], [FechaPedido], [Destino], [DireccionDestion], [Departamento]) VALUES (@IdUsuario, @FechaPedido, @Destino, @DireccionDestion, @Departamento)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Pedidos]" UpdateCommand="UPDATE [Pedidos] SET [IdUsuario] = @IdUsuario, [FechaPedido] = @FechaPedido, [Destino] = @Destino, [DireccionDestion] = @DireccionDestion, [Departamento] = @Departamento WHERE [IdPedido] = @original_IdPedido AND [IdUsuario] = @original_IdUsuario AND [FechaPedido] = @original_FechaPedido AND [Destino] = @original_Destino AND [DireccionDestion] = @original_DireccionDestion AND (([Departamento] = @original_Departamento) OR ([Departamento] IS NULL AND @original_Departamento IS NULL))">
-            <DeleteParameters>
-                <asp:Parameter Name="original_IdPedido" Type="Int32" />
-                <asp:Parameter Name="original_IdUsuario" Type="Int32" />
-                <asp:Parameter DbType="Date" Name="original_FechaPedido" />
-                <asp:Parameter Name="original_Destino" Type="String" />
-                <asp:Parameter Name="original_DireccionDestion" Type="String" />
-                <asp:Parameter Name="original_Departamento" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="IdUsuario" Type="Int32" />
-                <asp:Parameter DbType="Date" Name="FechaPedido" />
-                <asp:Parameter Name="Destino" Type="String" />
-                <asp:Parameter Name="DireccionDestion" Type="String" />
-                <asp:Parameter Name="Departamento" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="IdUsuario" Type="Int32" />
-                <asp:Parameter DbType="Date" Name="FechaPedido" />
-                <asp:Parameter Name="Destino" Type="String" />
-                <asp:Parameter Name="DireccionDestion" Type="String" />
-                <asp:Parameter Name="Departamento" Type="String" />
-                <asp:Parameter Name="original_IdPedido" Type="Int32" />
-                <asp:Parameter Name="original_IdUsuario" Type="Int32" />
-                <asp:Parameter DbType="Date" Name="original_FechaPedido" />
-                <asp:Parameter Name="original_Destino" Type="String" />
-                <asp:Parameter Name="original_DireccionDestion" Type="String" />
-                <asp:Parameter Name="original_Departamento" Type="String" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A4212A_FashionClothesConnectionString %>" SelectCommand="SELECT Compras.IdCompras, Compras.IdCompras AS Expr1, Compras.IdUsuario, Compras.IdProveedores, Compras.FechaCompra, DetalleCompra.IdDetalleCompra, DetalleCompra.IdProducto, DetalleCompra.Unidades, DetalleCompra.CostoUnitario FROM Compras INNER JOIN DetalleCompra ON Compras.IdCompras = DetalleCompra.IdDetalleCompra"></asp:SqlDataSource>
     </p>
                             <table class="dx-justification" __designer:mapid="129" width="100%">
                                 <tr __designer:mapid="12a">

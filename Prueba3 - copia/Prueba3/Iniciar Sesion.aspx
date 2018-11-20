@@ -20,6 +20,7 @@
                     <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="Usuario"></asp:Label>
                   <br />                   
                     <asp:TextBox ID="txtNombreUsuario" runat="server" Width="400px" ForeColor="#3333FF" class="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombreUsuario" EnableTheming="True" ErrorMessage="Ingrese un usuario" ForeColor="Red"></asp:RequiredFieldValidator>
                     <br />
       
             
@@ -28,6 +29,7 @@
                     <br />
                
                     <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" Width="400px" ForeColor="#3333FF" class="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtContraseña" ErrorMessage="Ingrese las contraseña" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
                     <br />
  

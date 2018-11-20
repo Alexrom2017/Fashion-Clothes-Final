@@ -30,15 +30,15 @@ namespace Prueba3
             //    Response.Write("<script>alert('Datos Incorrectos')</script>");
             //}
 
-            Login1 n2 = new Login1 ();
-            n2.usuario = this.txtNombreUsuario.Text;
-            n2.pass = this.txtContraseña.Text;
+            Login1 N1 = new Login1 ();
+            N1.usuario = this.txtNombreUsuario.Text;
+            N1.pass = this.txtContraseña.Text;
 
-            if (n2.Buscar() == true)
+            if (N1.Buscar() == true)
             {
-                DatosEstaticos.IDusuario = new N6().Usuarios.Where(st => st.NickName == txtNombreUsuario.Text).First().IdUsuario;
+                DatosEstaticos.IDusuario = new N1().Usuarios.Where(st => st.NickName == txtNombreUsuario.Text).First().IdUsuario;
                 DatosEstaticos.logeado = true;
-                DatosEstaticos.TipoUser = new N6().Usuarios.Where(st => st.NickName == txtNombreUsuario.Text).First().TiposdeUsuario.Descripcion;
+                DatosEstaticos.TipoUser = new N1().Usuarios.Where(st => st.NickName == txtNombreUsuario.Text).First().TiposdeUsuario.Descripcion;
                 Response.Write("<script>alert('" + DatosEstaticos.TipoUser +"')</script>");
                 Response.Redirect("~/Perfil.aspx");
             }

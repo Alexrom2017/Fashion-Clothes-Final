@@ -6,4 +6,7 @@
     Cantidad: <asp:TextBox ID="txtCantidad" runat="server"></asp:TextBox>
 
     <asp:Button ID="btnCantidad" runat="server" Text="Agregar" OnClick="BtnCantidad_Click" />
+      <br />
+      <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCantidad" ErrorMessage="Ingrese solo números" ForeColor="Red" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+      <br />
 </asp:Content>
