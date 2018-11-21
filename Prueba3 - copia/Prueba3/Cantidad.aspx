@@ -22,8 +22,18 @@
 
               </div>
               <div class="card-body">
+                  <h1 class="text-center"><%= vender.Nombre %></h1> 
                   <h3><%= vender.Detalles%> </h3>
               </div>
+              <div class="card-footer">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                    <h1>Categoria: <%= vender.CategoriaProducto.Nombre %></h1>
+                    </div>
+                    <div class=" col-sm-12 col-md-6">
+                    <h1>Precio: $<%= vender.PrecioVenta %></h1>
+                    </div>
+                </div>      
           </div>
                </div>
                <div class="col-4">
