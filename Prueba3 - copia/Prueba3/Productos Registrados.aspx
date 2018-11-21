@@ -5,6 +5,11 @@
     <br />
     <div class="col-md-8">
                         <asp:Panel ID="Panel1" runat="server">
+                            <br />
+                            <strong>
+                            <asp:Label ID="Label8" runat="server" Font-Size="X-Large" Text="Consultar productos"></asp:Label>
+                            </strong>
+                            <br />
                             <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="IdProductos" Theme="Material">
                                 <SettingsAdaptivity>
                                     <AdaptiveDetailLayoutProperties ColCount="1">

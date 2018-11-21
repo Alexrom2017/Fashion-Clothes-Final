@@ -35,7 +35,7 @@ namespace Prueba3
                 var idProducto = Request.QueryString["id"];
 
                 Productos producto = db.Productos.Find(int.Parse(idProducto));
-
+                
                 DetallePedido detalle = new DetallePedido()
                 {
                     Productos = producto,

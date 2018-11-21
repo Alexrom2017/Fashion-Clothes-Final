@@ -51,15 +51,23 @@
           <li ><a href="default.aspx">Inicio</a></li>
           <li><a href="Catalogo.aspx">Catalogo</a></li>
           <li><a href="Perfil.aspx">Perfil</a></li>
-            <li><a href="#">Opciones de usuario</a>
+          <li><a href="#">Opciones de usuario</a>
             <ul>
-           <li><a href="AgregarProductos.aspx">Agregar Productos</a></li>
-           <li><a href="AgregarProveedores.aspx">Proveedores</a></li>
+           <li><a href="AgregarProductos.aspx">Agregar Nuevo Productos</a>         
+           <li><a href="Catalogo.aspx">Agregar productos existentes</a>    
+           <li><a href="Compras.aspx">Agregar compra</a></li>   
+           <li><a href="AgregarProveedores.aspx">Agregar proveedores</a></li>                     
+            </ul>
+            </li>
+           <li><a href="#">Consultas</a>
+               <ul>
+           <li><a href="Productos Registrados.aspx">Productos registrados</a></li>
+           <li><a href="Compras Registradas.aspx">Compras registrados</a></li>
+           <li><a href="Ventas Registradas.aspx">Ventas Registrados</a></li>
+           <li><a href="ProveedoresRegistrados.aspx">Porveedores registrados</a></li>
+           <li><a href="Existencias.aspx">Existencias</a></li>
+           <li><a href="Categorias.aspx">Categorias</a></li>
            <li><a href="Usuarios Registrados.aspx">Usuarios Registrados</a></li>  
-           <li><a href="Compras.aspx">Compras</a></li>            
-           <li><a href="Ventas.aspx">Ventas</a></li>
-           <li><a href="Productos Registrados.aspx">Productos Registrados</a></li>
-           <li><a href="Compras Registradas.aspx">Productos Registrados</a></li>
             </ul>
             </li>
           <% }
@@ -70,7 +78,7 @@
         <li ><a href="default.aspx">Inicio</a></li>
         <li><a href="Iniciar Sesion.aspx">Iniciar Sesion</a></li>  
         <li><a href="Clientes.aspx">Registro</a></li>
-        <li><a href="Clientes.aspx">Quienes somos?</a></li>
+        <li><a href="Somos.aspx">Quienes somos?</a></li>
            
           <% }%>
         <!--<li class="last"><a href="#">Salir</a></li>-->

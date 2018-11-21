@@ -10,8 +10,9 @@ namespace Prueba3
     public partial class AgregarProductos : System.Web.UI.Page
     {
 
-        protected void Page_Load(object sender, EventArgs e)
+        protected void init(object sender, EventArgs e)
         {
+
             //Response.Write("<script> alert('El producto se registro exitosamente')</script>");
         }
 

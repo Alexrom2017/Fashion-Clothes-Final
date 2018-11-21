@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Categorias.aspx.cs" Inherits="Prueba3.Categorias" %>
 <%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
+    <strong>
+    <asp:Label ID="Label8" runat="server" Font-Size="XX-Large" Text="Categorias"></asp:Label>
+    </strong>
+    <br />
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableTheming="True" KeyFieldName="IdCategoria" Theme="Material">
         <SettingsAdaptivity>
             <AdaptiveDetailLayoutProperties ColCount="1">

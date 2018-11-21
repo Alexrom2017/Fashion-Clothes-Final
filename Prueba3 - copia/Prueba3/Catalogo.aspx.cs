@@ -52,6 +52,7 @@ namespace Prueba3
                     if (dbproductos.SaveChanges() > 0)
                     {
                         i++;
+                        //Response.Write("<script> alert('La compra a sido registrada')</script>");
                     }
                 }
 

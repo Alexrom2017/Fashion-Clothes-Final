@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="PreveedoresRegistrados.aspx.cs" Inherits="Prueba3.PreveedoresRegistrados" %>
 <%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
+                        <asp:Label ID="Label7" runat="server" Text="Consultar proveedores" Font-Bold="True" Font-Size="X-Large"></asp:Label>        
+    <br />
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableTheming="True" KeyFieldName="IdProveedor" Theme="Material">
         <SettingsAdaptivity>
             <AdaptiveDetailLayoutProperties ColCount="1">

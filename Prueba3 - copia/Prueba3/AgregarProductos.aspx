@@ -11,17 +11,11 @@
                     <div class="text-left">
                                 <div> 
                                   <br />
-                    <table class="w-25" style="width: 29%; height: 34px">
-                    <tr>
-                    <td class="right" style="width: 234px">
-                            <dx:BootstrapHyperLink ID="BootstrapHyperLink1" runat="server" NavigateUrl="~/Productos Registrados.aspx" Text="Productos registrados">
-                            </dx:BootstrapHyperLink>
-                        </td>
-                      </tr>
-                     </table>
         </div>
+                                <dx:BootstrapHyperLink ID="BootstrapHyperLink2" runat="server" NavigateUrl="~/Catalogo.aspx" Text="Agregar producto existente">
+                                </dx:BootstrapHyperLink>
                     <br />
-                        <asp:Label ID="Label7" runat="server" Text="Agregar Producto" Font-Bold="True" Font-Size="X-Large"></asp:Label>        <br />                        
+                        <asp:Label ID="Label7" runat="server" Text="Agregar nuevo producto" Font-Bold="True" Font-Size="X-Large"></asp:Label>        <br />                        
                     <br />
                     <br />
                         <asp:Label ID="Label4" runat="server" Text="Nombre:"></asp:Label>
@@ -53,9 +47,8 @@
                                 <br />
                         </div>
                     <br />
-                    <br />
-                    <br />
-                    <br />
+                            <dx:BootstrapHyperLink ID="BootstrapHyperLink1" runat="server" NavigateUrl="~/Productos Registrados.aspx" Text="Productos registrados">
+                            </dx:BootstrapHyperLink>
                     <br />
                     <br />
                     <br />

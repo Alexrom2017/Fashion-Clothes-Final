@@ -4,6 +4,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
         <br />
+    </p>
+    <p>
+                        <strong>
+                        <asp:Label ID="Label8" runat="server" Font-Size="X-Large" Text="Consultar compras"></asp:Label>
+                        </strong>        
+    </p>
+    <p>
         <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="IdCompras" Theme="Material">
 <SettingsAdaptivity>
 <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
@@ -42,13 +49,8 @@
                                 <tr __designer:mapid="12a">
                                     <td style="width: 50px" __designer:mapid="12b">&nbsp;</td>
                                     <td style="width: 295px" __designer:mapid="12c" class="dxfm-filterViewDateCell">
-                                        <dx:BootstrapHyperLink ID="BootstrapHyperLink3" runat="server" NavigateUrl="~/Compras.aspx" Text="Agregar ventas">
+                                        <dx:BootstrapHyperLink ID="BootstrapHyperLink3" runat="server" NavigateUrl="~/Catalogo.aspx" Text="Agregar compras">
                                         </dx:BootstrapHyperLink>
-                                    </td>
-                                    <td class="right" __designer:mapid="12e" style="width: 356px">
-                                        <dx:BootstrapHyperLink ID="BootstrapHyperLink4" runat="server" NavigateUrl="~/Default.aspx" Text="Inicio">
-                                        </dx:BootstrapHyperLink>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     </td>
                                 </tr>
                             </table>

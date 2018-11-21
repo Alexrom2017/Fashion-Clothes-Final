@@ -2,7 +2,14 @@
 <%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="Pedido" Theme="Metropolis">
+        &nbsp;</p>
+    <p>
+        <strong>
+        <asp:Label ID="Label8" runat="server" Font-Size="X-Large" Text="Consultas pedidos"></asp:Label>
+        </strong>
+    </p>
+    <p>
+        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="Pedido" Theme="Material">
 <SettingsAdaptivity>
 <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
 </SettingsAdaptivity>
@@ -38,8 +45,7 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A4212A_FashionClothesConnectionString2 %>" SelectCommand="SELECT Pedidos.IdPedido as Pedido, Pedidos.IdUsuario, Pedidos.FechaPedido as Fecha, Pedidos.Destino, Pedidos.DireccionDestion, Pedidos.Departamento, DetallePedido.IdDetallePedido as Detalle, DetallePedido.IdProducto as Producto, DetallePedido.Cantidad, DetallePedido.PrecioUnitario as Precio FROM Pedidos INNER JOIN DetallePedido ON Pedidos.IdPedido = DetallePedido.IdPedido"></asp:SqlDataSource>
     </p>
     <p>
-        <dx:ASPxHyperLink ID="ASPxHyperLink1" runat="server" NavigateUrl="~/Ventas.aspx" Text="Agregar ventas" />
-    </p>
+        &nbsp;</p>
     <p>
         &nbsp;</p>
     <p>
