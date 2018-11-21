@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Catalogo.aspx.cs" Inherits="Prueba3.Catalogo" %>
+<%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="css1/bootstrap.min.css" rel="stylesheet" />
     <br />
@@ -87,7 +88,8 @@
                 <% HyperLink1.NavigateUrl = "Cantidad.aspx?id=" + producto.IdProductos;%>--%>
                 <a href="Cantidad.aspx?id=<%= producto.IdProductos %>"  class="btn btn-block btn-info"> Comprar!</a>    
                 <a href="CantidadCompras.aspx?id=<%= producto.IdProductos %>"  class="btn btn-block btn-info"> Añadir mas productos!</a>
-              </div>
+                <asp:Button class="btn btn-block btn-info" ID="btnNuevaCompra" runat="server" OnClick="Button1_Click1" Text="Nueva Compra" />
+            </div>
             </div>
             <br />
          </div>
